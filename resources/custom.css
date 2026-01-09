@@ -1,0 +1,63 @@
+/* Fondo general */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+}
+
+/* Título del reporte */
+h1 {
+    color: #1f497d;
+    border-bottom: 2px solid #1f497d;
+    padding-bottom: 10px;
+}
+
+/* Tabla principal */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+th {
+    background-color: #1f497d;
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Estados */
+.status.passed {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}
+
+.status.failed {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+}
+
+.status.skipped {
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: bold;
+}
+
+/* Contenedor para el logo */
+.logo-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    height: 60px;
+}

@@ -1,0 +1,16 @@
+PROMPTS PARA UTILIZAR APPIUM RECORDER
+
+- Todo lo definido con la siguiente configuración: "variable_local= driver.find_element(by=AppiumBy.ANDROID_UIAUTOMATOR,
+                                   value="variable de appium"  Debes de agregar el siguiente formato: "variable_local= wait.until(
+                EC.element_to_be_clickable"
+
+-Crea un archivo nuevo en la carpeta Pruebas IA Brasil, basandote en el archivo a corregir y de no tener la carpeta, crea una nueva carpeta con ese nombre y guarda el archivo creado
+-No muevas la estructura de la automatización, solo cambia lo del primer punto
+-Línea máxima 120 caracteres
+-No redefinas wait, ya está disponible globalmente
+-Si encuentras alguna variable repetida en el codigo, creala de manera global y asignala a las variables repetidas del codigo, toma como ejemplo la automatización FLJ01.py de la carpeta Flujos.
+-Siempre crea la estructura que se muestra en el archivo Plantilla.py, revisala siempre antes de hacer el cambio
+-Genera capturas siempre y cuando ocupes la función captura_pantalla, siempre que la ocupes, ocupa el parametro request en cada función
+-Cuando tomes la captura en el nombre pondrás los prefijos de la automatización más una desripción breve y clara de lo que tomo foto. Ejemplo: "FLJ01-Ingreso App"
+-Usa Log().info al realizar una acción en cada try y Log().error en cada except ocupando la variable "e"
+-Variables en minúsculas
