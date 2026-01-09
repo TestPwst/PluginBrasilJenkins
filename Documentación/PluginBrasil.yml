@@ -1,0 +1,76 @@
+# *****************************************************************
+#                                        Configuración Base Brasil
+# *****************************************************************
+# *************************** Libro Ruta*****************************
+Libro ruta:
+  Clientes:
+    ruta: "Cliente > Clientes"
+    Codigo cliente:
+      "525521"
+      "526495"
+      "1554780"
+      "1684386"
+      "525279"
+      "798981"
+      "1840007"
+      "383030"
+
+  Vendedor:
+    ruta: "Tablas > Vendedores > Vendedores"
+    codigo: "0103"
+    codigo usuario: "BR0103"
+    nombre: "Gleyson de Oliveira Machado"
+    perfil movil: "7"
+    ruta vendedor: "Todas las rutas"
+
+# *****************************************************************
+# *************************** Encuestas *****************************
+Encuestas:
+   ruta: "Tablas > Encuestas > Encuestas"
+   codigo: "C_GT"
+   descripcion: "Compliance GT"
+   frecuencia: "En cada visita"
+   filtros: "codigo de cliente"
+   cliente: "383030"
+   tipo: "Instancia 1.0"
+
+Tipo de encuesta:
+  tipo de encuesta 1:
+      codigo: "1"
+      descripcion: "Informe o código do cliente"
+      orden: "1"
+
+  tipo de encuesta 2:
+    codigo: "2"
+    descripcion: "Informe a Regional"
+    orden: "1"
+
+  tipo de encuesta 3:
+    codigo: "3"
+    descripcion: "Tem peça instalada"
+    orden: "2"
+
+  tipo de encuesta 4:
+    codigo: "4"
+    descripcion: "Tem fotografia do sucesso"
+    orden: "3"
+
+  tipo de encuesta 5:
+    codigo: "5"
+    descripcion: "Foto da peça instalada"
+    orden: "4"
+
+  tipo de encuesta 6:
+    codigo: "6"
+    descripcion: "Justificativa"
+    orden: "5"
+# *****************************************************************
+# *************************** Pop Up *******************************
+Pop Up:
+  ruta: "Tablas > Vendedores > Pop Up"
+  codigo: "90"
+  descripcion: "Test PopUp Automatizacion"
+  tipo pop up: "PB01"
+  texto: "Validacion Pop Up Automatizacion Testing"
+  filtro: "codigo de cliente"
+  cliente: "383030"

@@ -1,0 +1,85 @@
+2025-12-30 13:10:52,228 - root - INFO - Iniciando ingreso a la aplicación
+2025-12-30 13:11:05,104 - root - INFO - Captura guardada: assets\TC35-Ingreso App_20251230_131103.png
+2025-12-30 13:11:05,105 - root - INFO - Captura agregada al reporte: TC35-Ingreso App_20251230_131103.png
+2025-12-30 13:11:05,124 - root - INFO - Iniciando carga de usuario
+2025-12-30 13:15:31,133 - root - INFO - Captura guardada: assets\TC35-Carga Usuario_20251230_131527.png
+2025-12-30 13:15:31,134 - root - INFO - Captura agregada al reporte: TC35-Carga Usuario_20251230_131527.png
+2025-12-30 13:15:31,134 - root - INFO - Iniciando registro de punto
+2025-12-30 13:24:00,859 - root - ERROR - No se logró dar click al botón instalar, validar el error: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\testing\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\testing\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\testing\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-12-30 13:24:00,864 - root - ERROR - No se logró registrar punto, validar el error: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\testing\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\testing\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\testing\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-12-30 13:24:01,264 - root - INFO - Seleccionando cliente ANTONIO JOSE GOMES MARINHO
+2025-12-30 13:32:21,649 - root - ERROR - No se logró completar la automatización TC35, validar el error: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.findElOrEls (C:\Users\testing\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-android-driver\lib\commands\find.ts:86:11)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Users\testing\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:60:12)
+    at AndroidUiautomator2Driver.findElement (C:\Users\testing\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\basedriver\commands\find.ts:75:12)
+2025-12-30 13:36:52,763 - root - INFO - Iniciando ingreso a la aplicación
+2025-12-30 13:37:03,990 - root - INFO - Captura guardada: assets\TC35-Ingreso App_20251230_133703.png
+2025-12-30 13:37:03,991 - root - INFO - Captura agregada al reporte: TC35-Ingreso App_20251230_133703.png
+2025-12-30 13:37:03,995 - root - INFO - Iniciando carga de usuario
+2025-12-30 13:40:43,563 - root - INFO - Captura guardada: assets\TC35-Carga Usuario_20251230_134040.png
+2025-12-30 13:40:43,563 - root - INFO - Captura agregada al reporte: TC35-Carga Usuario_20251230_134040.png
+2025-12-30 13:40:43,564 - root - INFO - Iniciando registro de punto
+2025-12-30 13:41:07,647 - root - INFO - Captura guardada: assets\TC35-Registro Punto_20251230_134106.png
+2025-12-30 13:41:07,647 - root - INFO - Captura agregada al reporte: TC35-Registro Punto_20251230_134106.png
+2025-12-30 13:41:07,656 - root - INFO - Seleccionando cliente ANTONIO JOSE GOMES MARINHO
+2025-12-30 13:41:10,285 - root - INFO - Cliente ANTONIO JOSE GOMES MARINHO seleccionado
+2025-12-30 13:41:10,996 - root - INFO - Captura guardada: assets\TC35-Cliente Seleccionado_20251230_134110.png
+2025-12-30 13:41:10,997 - root - INFO - Captura agregada al reporte: TC35-Cliente Seleccionado_20251230_134110.png
+2025-12-30 13:41:10,998 - root - INFO - Accediendo a dados do cliente
+2025-12-30 13:41:11,259 - root - INFO - Iniciando visita
+2025-12-30 13:41:12,827 - root - INFO - Confirmando inicio de visita
+2025-12-30 13:41:13,751 - root - INFO - Captura guardada: assets\TC35-Visita Iniciada_20251230_134113.png
+2025-12-30 13:41:13,752 - root - INFO - Captura agregada al reporte: TC35-Visita Iniciada_20251230_134113.png
+2025-12-30 13:41:13,753 - root - INFO - Iniciando proceso de venda
+2025-12-30 13:41:17,039 - root - INFO - Diálogo de venda confirmado
+2025-12-30 13:41:17,040 - root - INFO - Seleccionando productos y agregando cantidades
+2025-12-30 13:42:00,316 - root - INFO - 10 unidades de CHESTERFIELD BLUE BOX agregadas
+2025-12-30 13:42:13,321 - root - INFO - 10 unidades de CHESTERFIELD ORIGINAL BOX agregadas
+2025-12-30 13:42:31,715 - root - INFO - 10 unidades de CHF Terras Blue agregadas
+2025-12-30 13:42:32,684 - root - INFO - Artículo Sinergia seleccionado
+2025-12-30 13:42:35,429 - root - INFO - 3 unidades de CRICKET ISQUEIRO MINI BANDEJA agregadas
+2025-12-30 13:42:36,227 - root - INFO - Captura guardada: assets\TC35-Productos Seleccionados_20251230_134235.png
+2025-12-30 13:42:36,228 - root - INFO - Captura agregada al reporte: TC35-Productos Seleccionados_20251230_134235.png
+2025-12-30 13:42:36,228 - root - INFO - Finalizando selección de artículos
+2025-12-30 13:42:37,658 - root - INFO - Continuando con el proceso de venda
+2025-12-30 13:42:37,659 - root - INFO - Manejando mensaje de límite de crédito
+2025-12-30 13:42:39,828 - root - INFO - Mensaje de límite de crédito procesado
+2025-12-30 13:42:39,829 - root - INFO - Configurando método de pago
+2025-12-30 13:42:41,001 - root - INFO - Método de pago Boleto configurado
+2025-12-30 13:42:41,001 - root - INFO - Confirmando condiciones de venta
+2025-12-30 13:42:46,022 - root - INFO - Condiciones de venta confirmadas
+2025-12-30 13:42:46,798 - root - INFO - Captura guardada: assets\TC35-Condiciones Configuradas_20251230_134246.png
+2025-12-30 13:42:46,800 - root - INFO - Captura agregada al reporte: TC35-Condiciones Configuradas_20251230_134246.png
+2025-12-30 13:42:46,800 - root - INFO - Configurando parcelas de pago
+2025-12-30 13:42:53,917 - root - INFO - Parcelas configuradas exitosamente
+2025-12-30 13:42:53,918 - root - INFO - Ingresando observación sobre límite de crédito
+2025-12-30 13:42:57,089 - root - INFO - Captura guardada: assets\TC35-Observacion Ingresada_20251230_134256.png
+2025-12-30 13:42:57,090 - root - INFO - Captura agregada al reporte: TC35-Observacion Ingresada_20251230_134256.png
+2025-12-30 13:42:57,091 - root - INFO - Revisando ítems del pedido
+2025-12-30 13:42:58,614 - root - INFO - Ítems del pedido revisados
+2025-12-30 13:42:58,615 - root - INFO - Configurando información financiera
+2025-12-30 13:43:03,019 - root - INFO - Información financiera configurada
+2025-12-30 13:43:03,773 - root - INFO - Captura guardada: assets\TC35-Info Financiera_20251230_134303.png
+2025-12-30 13:43:03,774 - root - INFO - Captura agregada al reporte: TC35-Info Financiera_20251230_134303.png
+2025-12-30 13:43:03,774 - root - INFO - Finalizando pedido
+2025-12-30 13:43:05,032 - root - INFO - Pedido finalizado exitosamente
+2025-12-30 13:43:05,033 - root - INFO - Verificando pedido en finalizadas
+2025-12-30 13:43:09,633 - root - INFO - Cliente confirmado en finalizadas
+2025-12-30 13:43:10,401 - root - INFO - TC35 - Venta con Límite de Crédito completado exitosamente
+2025-12-30 13:43:11,107 - root - INFO - Captura guardada: assets\TC35-Completado_20251230_134310.png
+2025-12-30 13:43:11,109 - root - INFO - Captura agregada al reporte: TC35-Completado_20251230_134310.png
