@@ -37,7 +37,7 @@ pipeline {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     bat """
                     npm install -g snyk
-                    snyk auth %Token_Snyk%
+                    snyk auth %SNYK_TOKEN%
                     snyk test --all-projects
                     """
                 }
