@@ -7,7 +7,7 @@ pipeline {
         SONARQUBE_ENV = "SonarQubePluginBrasil"
         DEPENDENCY_CHECK_DIR = "dependency-check"
         // Asegúrate de que el ID 'snyk-token' esté creado en Jenkins -> Credentials
-        SNYK_TOKEN = credentials('snyk-token')
+        SNYK_TOKEN = credentials('Token_Snyk')
     }
 
     stages {
@@ -37,7 +37,7 @@ pipeline {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     bat """
                     npm install -g snyk
-                    snyk auth %SNYK_TOKEN%
+                    snyk auth %Token_Snyk%
                     snyk test --all-projects
                     """
                 }
@@ -131,23 +131,27 @@ pipeline {
 
     post {
         always {
-            publishHTML(target: [
-                reportDir: 'results',
-                reportFiles: '**/*.html',
-                reportName: 'Reporte Automatización (HTML)',
-                keepAll: true,
-                alwaysLinkToLastBuild: true,
-                allowMissing: true // Cambiado a true para evitar que el pipeline falle si no hay HTML
-            ])
+
+            script {
+                publishHTML(target: [
+                    reportDir: 'results',
+                    reportFiles: '**/*.html',
+                    reportName: 'Reporte Automatización (HTML)',
+                    keepAll: true,
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: true
+                ])
+            }
         }
+
         failure {
             emailext(
-                subject: "❌ FALLÓ Pipeline DCO - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                subject: "❌ FALLÓ Pipeline PluginBrasil - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 to: "testingmexico1@gmail.com",
                 body: """
     Hola equipo,
 
-    ❌ El pipeline DCO FALLÓ.
+    ❌ El pipeline PluginBrasil FALLÓ.
 
     Job: ${env.JOB_NAME}
     Build: ${env.BUILD_NUMBER}
