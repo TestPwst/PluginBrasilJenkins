@@ -14,11 +14,11 @@ pipeline {
 
         stage('2. Setup Python & Deps') {
             steps {
-                bat '''
-                    if not exist venv (python -m venv venv)
-                    call venv\\Scripts\\activate
+                sh '''
+                    python3 -m venv venv
+                    . venv/bin/activate
                     pip install --upgrade pip
-		    pip install -r requirements.txt
+                    pip install -r requirements.txt
                 '''
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         stage('3. Start Appium Server') {
             steps {
                 // Iniciamos Appium en segundo plano.
-                bat 'start /B appium --log appium_server.log & timeout /t 10 /nobreak'
+                sh 'appium --log appium_server.log & sleep 10'
             }
         }
 
@@ -34,8 +34,8 @@ pipeline {
             steps {
                 script {
                     try {
-                        bat '''
-                            call venv\\Scripts\\activate
+                        sh '''
+                            . venv/bin/activate
                             pytest Brasil/Prioridad_MEDIA/ --junitxml=reporte_pruebas.xml
                         '''
                     } catch (Exception e) {
@@ -50,7 +50,7 @@ pipeline {
     post {
         always {
                // 1. Se detiene Appium en Windows
-            bat 'taskkill /F /IM node.exe /T || echo Appium no estaba corriendo'
+            sh 'pkill -f node || echo "Appium no estaba corriendo"'
 
             // 2 Publicar resultados
             junit 'reporte_pruebas.xml'
