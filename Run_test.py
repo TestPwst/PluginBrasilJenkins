@@ -39,7 +39,7 @@ def ejecutar_tests():
     log_file_path = os.path.join(carpeta_logs, "execution.log")
     configurar_logger(log_file_path)
 
-    rutas_base = ["BRASIL/Prioridad ALTA"]
+    rutas_base = ["BRASIL/Prioridad_ALTA"]
     nombres_excluidos = ("FuncionesGral.py", "VariablesGral.py", "base_test.py", "__init__.py")
     extensiones_validas = (".py",)
 

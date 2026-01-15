@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+
+    environment {
+        REPO_URL = 'https://github.com/TestPwst/PluginBrasilJenkins.git/'
+    }
+
+    stages {
+        stage('1. Checkout') {
+            steps {
+                git branch: '5.2.X.X', url: "${env.REPO_URL}"
+            }
+        }
+
+        stage('2. Setup Python & Deps') {
+            steps {
+                bat '''
+                    if not exist venv (python -m venv venv)
+                    call venv\\Scripts\\activate
+                    pip install --upgrade pip
+		    pip install -r requirements.txt
+                '''
+            }
+        }
+
+        stage('3. Start Appium Server') {
+            steps {
+                // Iniciamos Appium en segundo plano.
+                bat 'start /B appium --log appium_server.log & timeout /t 10 /nobreak'
+            }
+        }
+
+        stage('4. Run Automated Tests') {
+            steps {
+                script {
+                    try {
+                        bat '''
+                            call venv\\Scripts\\activate
+                            pytest Brasil/FLUJOS/ --junitxml=reporte_pruebas.xml
+                        '''
+                    } catch (Exception e) {
+                        currentBuild.result = 'FAILURE'
+                        echo "Las pruebas fallaron. Iniciando limpieza..."
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+               // 1. Se detiene Appium en Windows
+            bat 'taskkill /F /IM node.exe /T || echo Appium no estaba corriendo'
+
+            // 2 Publicar resultados
+            junit 'reporte_pruebas.xml'
+
+            // 3. Guardar el logs
+            archiveArtifacts artifacts: 'appium_server.log', allowEmptyArchive: true
+        }
+    }
+}
